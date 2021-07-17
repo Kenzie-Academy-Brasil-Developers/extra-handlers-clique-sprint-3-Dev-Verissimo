@@ -15,6 +15,7 @@
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="rosa_button">Rosa</button>
         <div id="color_box" class="gray"></div>        
         <script>
             const color_box = document.getElementById("color_box");
@@ -28,6 +29,13 @@
             blue_button.onclick = function () {
                 color_box.className = "blue";
             };
+
+            const rosa_button = document.getElementById("rosa_button");
+            rosa_button.onclick = function () {
+                color_box.className = "pink";
+            };
+
+
 
             /* TODO 1
              *
@@ -47,6 +55,9 @@
             
             const counter_button = document.getElementById("counter_button");
             counter_button.onclick = function() {
+                count++
+
+                countspan.innerHTML = count
                 /* TODO 2
                  *
                  *  A função incrementa 1 em um contador "count", 
@@ -63,6 +74,15 @@
         <script>
             const even_or_odd_button = document.getElementById("even_or_odd_button");
             even_or_odd_button.onclick = function() {
+                if (count == 0) {
+                    alert("É igual a 0")
+                }else if(count%2 === 0){
+                    alert("É par")
+                }
+                else
+                    alert("É impar")
+
+                
                 /* TODO 3
                  *
                  * A função mostra um "alert dialog" mostrando se o contador 
